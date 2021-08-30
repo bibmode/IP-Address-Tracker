@@ -155,10 +155,33 @@ body {
 
 .input__field {
   font-size: 1.8rem;
+  font-weight: 500;
   padding: 1.8rem 2.3rem;
   border-radius: 15px 0 0 15px;
   width: 90%;
   cursor: pointer;
+}
+
+@media (max-width: 34.56em) {
+  .input__field {
+    padding-right: 1.8rem;
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 34.56em) {
+  .input__field::-webkit-input-placeholder {
+    font-size: 1.5rem;
+  }
+  .input__field:-ms-input-placeholder {
+    font-size: 1.5rem;
+  }
+  .input__field::-ms-input-placeholder {
+    font-size: 1.5rem;
+  }
+  .input__field::placeholder {
+    font-size: 1.5rem;
+  }
 }
 
 .input__btn {
@@ -166,6 +189,12 @@ body {
   background-color: var(--color-very-dark-gray);
   border-radius: 0 15px 15px 0;
   cursor: pointer;
+}
+
+@media (max-width: 34.56em) {
+  .input__btn {
+    width: 54px;
+  }
 }
 
 .card {
@@ -192,6 +221,10 @@ body {
   width: calc(100% / 4);
   padding-left: 2rem;
   position: relative;
+}
+
+.item:first-child {
+  padding-left: 3rem;
 }
 
 @media (max-width: 34.56em) {
@@ -225,16 +258,26 @@ body {
   font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 
 .item__content {
   color: var(--color-very-dark-gray);
   margin-top: 1rem;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   font-weight: 500;
   padding-right: 2rem;
   word-wrap: break-word;
+}
+
+.item__content:last-child {
+  padding-right: 3rem;
+}
+
+@media (max-width: 34.56em) {
+  .item__content:last-child {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 53.63em) {
