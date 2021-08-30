@@ -61,7 +61,11 @@ const generateMap = function (lat, lng) {
     subdomains: ["mt0", "mt1", "mt2", "mt3"],
   }).addTo(map);
 
-  L.marker([lat, lng]).addTo(map).bindPopup("Here it is!").openPopup();
+  var myIcon = L.icon({
+    iconUrl: "images/icon-location.svg",
+  });
+
+  L.marker([lat, lng], { icon: myIcon }).addTo(map);
 };
 
 ////////////////////////////////////////
