@@ -1,6 +1,7 @@
 :root {
   --color-very-dark-gray: hsl(0, 0%, 17%);
   --color-dark-gray: hsl(0, 0%, 59%);
+  --color-light-gray: hsla(0, 0%, 59%, 0.438);
   --color-white: #fff;
 }
 
@@ -71,12 +72,13 @@ body {
   width: 75%;
   height: 150px;
   border-radius: 20px;
+  z-index: 10;
 }
 
-.map {
-  background-color: orangered;
+#map {
   width: 100vw;
   height: calc(100vh - 270px);
+  z-index: 0;
 }
 
 .input {
@@ -114,15 +116,24 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-shadow: 0 1rem 1rem var(--color-light-gray);
+          box-shadow: 0 1rem 1rem var(--color-light-gray);
 }
 
 .item {
   width: calc(100% / 4);
   padding-left: 3rem;
+  position: relative;
 }
 
-.item:not(:last-child) {
-  border-right: 1px solid var(--color-dark-gray);
+.item:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 80%;
+  background-color: var(--color-light-gray);
+  position: absolute;
+  top: 10px;
+  right: 2px;
 }
 
 .item__title {
