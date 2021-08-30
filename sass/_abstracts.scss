@@ -3,4 +3,14 @@
   --color-dark-gray: hsl(0, 0%, 59%);
   --color-light-gray: hsla(0, 0%, 59%, 0.438);
   --color-white: #fff;
+  --color-error: rgb(170, 52, 32);
+  --color-error-light: rgb(255, 201, 192);
+}
+
+.error-theme {
+  background-color: var(--color-error-light);
+
+  &::placeholder {
+    color: var(--color-error);
+  }
 }

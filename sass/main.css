@@ -3,6 +3,28 @@
   --color-dark-gray: hsl(0, 0%, 59%);
   --color-light-gray: hsla(0, 0%, 59%, 0.438);
   --color-white: #fff;
+  --color-error: rgb(170, 52, 32);
+  --color-error-light: rgb(255, 201, 192);
+}
+
+.error-theme {
+  background-color: var(--color-error-light);
+}
+
+.error-theme::-webkit-input-placeholder {
+  color: var(--color-error);
+}
+
+.error-theme:-ms-input-placeholder {
+  color: var(--color-error);
+}
+
+.error-theme::-ms-input-placeholder {
+  color: var(--color-error);
+}
+
+.error-theme::placeholder {
+  color: var(--color-error);
 }
 
 *,
@@ -80,12 +102,25 @@ body {
   z-index: 0;
 }
 
+/* .popup {
+  background-color: var(--color-error);
+  color: var(--color-white);
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2;
+
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: -39%;
+} */
 .input {
   width: 550px;
   margin: 2.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .input > * {

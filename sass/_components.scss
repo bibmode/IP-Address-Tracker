@@ -1,8 +1,22 @@
+/* .popup {
+  background-color: var(--color-error);
+  color: var(--color-white);
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2;
+
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: -39%;
+} */
+
 .input {
   width: 550px;
   margin: 2.5rem 0;
 
   display: flex;
+  position: relative;
 
   & > * {
     height: 100%;
