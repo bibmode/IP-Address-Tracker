@@ -112,15 +112,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 //input button click
 document.querySelector(".input__btn").addEventListener("click", () => {
-  //let userInput = document.querySelector(".input__field");
-
-  /* if (userInput.value.trim() !== "") {
-    fetchData(userInput.value);
-    userInput.value = "";
-  } */
   if (inputField.value.trim() !== "") {
     fetchData(inputField.value);
     inputField.value = "";
+  } else {
+    errorHandler();
   }
 });
 
