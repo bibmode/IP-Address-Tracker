@@ -70,7 +70,6 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   width: 75%;
-  height: 150px;
   border-radius: 20px;
   z-index: 10;
 }

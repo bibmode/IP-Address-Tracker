@@ -14,6 +14,14 @@ fetch(`https://geo.ipify.org/api/v1?apiKey=at_dwa8sZ2rLXbOyLCd7fZQHASemVGTR&`)
 
     //adding map to UI
     showLocationMap(lat, lng);
+    cardDetails(
+      data.ip,
+      data.location.city,
+      data.location.country,
+      data.location.geonameId,
+      data.location.timezone,
+      data.isp
+    );
   });
 
 ////////////////////////////////////////
@@ -31,3 +39,19 @@ const showLocationMap = function (lat, lng) {
 
 ////////////////////////////////////////
 //adding information on cards
+
+//Event listener: input button
+document.querySelector(".input__btn").addEventListener("click", () => {
+  cardDetails();
+});
+
+const cardDetails = function (ip, city, country, geoId, timezone, isp) {
+  const userInput = document.querySelector(".input__field").value;
+
+  document.querySelector("#ip").textContent = `${ip}`;
+  document.querySelector("#city").textContent = `${city}`;
+  document.querySelector("#country").textContent = `${country}`;
+  document.querySelector("#geoId").textContent = `${geoId}`;
+  document.querySelector("#timezone").textContent = `${timezone}`;
+  document.querySelector("#isp").textContent = `${isp}`;
+};
