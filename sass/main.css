@@ -1,1 +1,142 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+:root {
+  --color-very-dark-gray: hsl(0, 0%, 17%);
+  --color-dark-gray: hsl(0, 0%, 59%);
+  --color-white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  background-image: url(../images/pattern-bg.png);
+  background-size: cover;
+  width: 100%;
+  height: 270px;
+  text-align: center;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.header__title {
+  color: var(--color-white);
+  font-size: 2.9rem;
+  font-weight: 500;
+}
+
+.card {
+  position: absolute;
+  top: 190px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 75%;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.map {
+  background-color: orangered;
+  width: 100vw;
+  height: calc(100vh - 270px);
+}
+
+.input {
+  width: 550px;
+  margin: 2.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input > * {
+  height: 100%;
+  border: none;
+  outline: none;
+}
+
+.input__field {
+  font-size: 1.8rem;
+  padding: 1.6rem 2.3rem;
+  border-radius: 15px 0 0 15px;
+  width: 90%;
+  cursor: pointer;
+}
+
+.input__btn {
+  width: 10%;
+  background-color: var(--color-very-dark-gray);
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item {
+  width: calc(100% / 4);
+  padding-left: 3rem;
+}
+
+.item:not(:last-child) {
+  border-right: 1px solid var(--color-dark-gray);
+}
+
+.item__title {
+  color: var(--color-dark-gray);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.item__content {
+  color: var(--color-very-dark-gray);
+  margin-top: 1rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  width: 70%;
+}
+/*# sourceMappingURL=main.css.map */
