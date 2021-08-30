@@ -1,6 +1,6 @@
-# Frontend Mentor - IP address tracker solution
+# IP address tracker solution
 
-This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is my solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -16,7 +16,6 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -31,83 +30,51 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+**Desktop View**
+[![Screenshot-2021-08-31-at-02-06-27-Frontend-Mentor-IP-Address-Tracker.png](https://i.postimg.cc/x1xGRykt/Screenshot-2021-08-31-at-02-06-27-Frontend-Mentor-IP-Address-Tracker.png)](https://postimg.cc/cv3813Bn)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+**Mobile View** <br/>
+[![Screenshot-2021-08-31-at-02-09-15-Frontend-Mentor-IP-Address-Tracker.png](https://i.postimg.cc/vZkgTPxF/Screenshot-2021-08-31-at-02-09-15-Frontend-Mentor-IP-Address-Tracker.png)](https://postimg.cc/pmQX1JBq)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My Frontend Mentor profile](https://www.frontendmentor.io/solutions/vanilla-js-leaflet-maps-and-ip-geolocation-api-h9Lq5yY2gP)
+- Live Site URL: [IP Address Tracker](https://bibmode.github.io/IP-Address-Tracker/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
+- HTML 5
+- Vanilla Javascript
+- SASS
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Desktop-first workflow
+- [Leaflet API](https://leafletjs.com/) - Leaflet library
+- [IP Geolocation](https://geo.ipify.org/docs) - IP Geolocation API docs
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I learned how to properly read web API docs with this project. I was able to use and manipulate the Leaflet maps and how to integrate google maps tile in it. I further understood how to work with JSON files. I also learned about the DOMContentLoaded event.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I am overall super satisfied with how this project turned out in the end. I think this would be a good project for me to practice a Javascript framework in the future. 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Leaflet Icon Guide](https://leafletjs.com/reference-1.7.1.html#icon) - This is a very comprehensive guide for manipualting icons in leaflet.
+- [IPvoid](https://www.ipvoid.com/random-ip/) - Great resource for generating random IP codes for testing purposes.
+- [Leaflet Map API with Google Satellite layer](https://stackoverflow.com/questions/9394190/leaflet-map-api-with-google-satellite-layer) - This forum page made me understood how to apply Google Map tiles in my map section with Leaflet.
+- [Refresh Leaflet map](https://stackoverflow.com/questions/19186428/refresh-leaflet-map-map-container-is-already-initialized) - This helped me fix a bug in how to remove, add, and change the map view in leaflet.
+- [Relocate Leaflet zoom control](https://stackoverflow.com/questions/33614912/how-to-locate-leaflet-zoom-control-in-a-desired-position) - very useful answer in hwo to relocate leaflet's built in zoom control.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@BibMode](https://www.frontendmentor.io/profile/BibMode)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Thank you to frontend mentor for this great challenge!
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
