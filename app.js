@@ -54,7 +54,7 @@ const errorHandler = function () {
 ////////////////////////////////////////
 //generate map
 const generateMap = function (lat, lng) {
-  map = L.map("map").setView([lat, lng], 17);
+  map = L.map("map", { zoomControl: false }).setView([lat, lng], 17);
 
   L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
     maxZoom: 20,
@@ -66,6 +66,12 @@ const generateMap = function (lat, lng) {
   });
 
   L.marker([lat, lng], { icon: myIcon }).addTo(map);
+
+  L.control
+    .zoom({
+      position: "bottomright",
+    })
+    .addTo(map);
 };
 
 ////////////////////////////////////////

@@ -65,7 +65,7 @@ body {
   width: 100%;
   height: 270px;
   text-align: center;
-  padding: 3rem;
+  padding: 3rem 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,6 +85,12 @@ body {
   font-weight: 500;
 }
 
+@media (max-width: 34.56em) {
+  .header__title {
+    font-size: 2.6rem;
+  }
+}
+
 .card {
   position: absolute;
   top: 190px;
@@ -94,6 +100,18 @@ body {
   width: 75%;
   border-radius: 20px;
   z-index: 10;
+}
+
+@media (max-width: 67.75em) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 34.56em) {
+  .card {
+    top: 165px;
+  }
 }
 
 #map {
@@ -129,9 +147,15 @@ body {
   outline: none;
 }
 
+@media (max-width: 38.31em) {
+  .input {
+    width: 100%;
+  }
+}
+
 .input__field {
   font-size: 1.8rem;
-  padding: 1.6rem 2.3rem;
+  padding: 1.8rem 2.3rem;
   border-radius: 15px 0 0 15px;
   width: 90%;
   cursor: pointer;
@@ -154,10 +178,30 @@ body {
           box-shadow: 0 1rem 1rem var(--color-light-gray);
 }
 
+@media (max-width: 34.56em) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
 .item {
   width: calc(100% / 4);
-  padding-left: 3rem;
+  padding-left: 2rem;
   position: relative;
+}
+
+@media (max-width: 34.56em) {
+  .item {
+    padding: 0 2.5rem;
+    width: 100%;
+  }
+  .item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 }
 
 .item:not(:last-child)::after {
@@ -170,18 +214,47 @@ body {
   right: 2px;
 }
 
+@media (max-width: 34.56em) {
+  .item:not(:last-child)::after {
+    display: none;
+  }
+}
+
 .item__title {
   color: var(--color-dark-gray);
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 .item__content {
   color: var(--color-very-dark-gray);
   margin-top: 1rem;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 500;
-  width: 70%;
+  padding-right: 2rem;
+  word-wrap: break-word;
+}
+
+@media (max-width: 53.63em) {
+  .item__content {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 38.31em) {
+  .item__content {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 34.56em) {
+  .item__content {
+    padding-right: 0;
+    margin-top: 0.5rem;
+    font-size: 2.3rem;
+    font-weight: 500;
+  }
 }
 /*# sourceMappingURL=main.css.map */

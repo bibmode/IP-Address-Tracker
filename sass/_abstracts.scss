@@ -1,3 +1,4 @@
+//variables
 :root {
   --color-very-dark-gray: hsl(0, 0%, 17%);
   --color-dark-gray: hsl(0, 0%, 59%);
@@ -7,6 +8,34 @@
   --color-error-light: rgb(255, 201, 192);
 }
 
+//mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: 67.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-medium {
+    @media (max-width: 53.63em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-small {
+    @media (max-width: 38.31em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: 34.56em) {
+      @content;
+    }
+  }
+}
+
+//utility classes
 .error-theme {
   background-color: var(--color-error-light);
 
