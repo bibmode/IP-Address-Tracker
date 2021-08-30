@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 });
 
 //input button click
+
 document.querySelector(".input__btn").addEventListener("click", () => {
   if (inputField.value.trim() !== "") {
     fetchData(inputField.value);
