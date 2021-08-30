@@ -1,40 +1,56 @@
 "use strict";
 
 ////////////////////////////////////////
-//open user location on map as user loads
-let lat, lng;
+//getting data from API
+let lat, lng, map;
 
-fetch(`https://geo.ipify.org/api/v1?apiKey=at_dwa8sZ2rLXbOyLCd7fZQHASemVGTR&`)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    lat = data.location.lat;
-    lng = data.location.lng;
-    console.log(lat, lng);
+const fetchData = function (ipUser = "") {
+  fetch(
+    `https://geo.ipify.org/api/v1?apiKey=at_dwa8sZ2rLXbOyLCd7fZQHASemVGTR&ipAddress=${ipUser}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      lat = data.location.lat;
+      lng = data.location.lng;
 
-    //adding map to UI
-    showLocationMap(lat, lng);
-    cardDetails(
-      data.ip,
-      data.location.city,
-      data.location.country,
-      data.location.geonameId,
-      data.location.timezone,
-      data.isp
-    );
-  });
+      cardDetails(
+        data.ip,
+        data.location.city,
+        data.location.country,
+        data.location.geonameId,
+        data.location.timezone,
+        data.isp
+      );
+
+      //adding map to UI
+      showLocationMap(lat, lng);
+    });
+};
 
 ////////////////////////////////////////
 //adding map to UI
 const showLocationMap = function (lat, lng) {
-  var map = L.map("map").setView([lat, lng], 17);
+  if (map != null) {
+    map.remove();
 
-  L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
-    maxZoom: 20,
-    subdomains: ["mt0", "mt1", "mt2", "mt3"],
-  }).addTo(map);
+    map = L.map("map").setView([lat, lng], 17);
 
-  L.marker([lat, lng]).addTo(map).bindPopup("Here it is!").openPopup();
+    L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
+      maxZoom: 20,
+      subdomains: ["mt0", "mt1", "mt2", "mt3"],
+    }).addTo(map);
+
+    L.marker([lat, lng]).addTo(map).bindPopup("Here it is!").openPopup();
+  } else {
+    map = L.map("map").setView([lat, lng], 17);
+
+    L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
+      maxZoom: 20,
+      subdomains: ["mt0", "mt1", "mt2", "mt3"],
+    }).addTo(map);
+
+    L.marker([lat, lng]).addTo(map).bindPopup("Here it is!").openPopup();
+  }
 };
 
 ////////////////////////////////////////
@@ -46,12 +62,25 @@ document.querySelector(".input__btn").addEventListener("click", () => {
 });
 
 const cardDetails = function (ip, city, country, geoId, timezone, isp) {
-  const userInput = document.querySelector(".input__field").value;
-
   document.querySelector("#ip").textContent = `${ip}`;
-  document.querySelector("#city").textContent = `${city}`;
+  document.querySelector("#city").textContent = `${city}, `;
   document.querySelector("#country").textContent = `${country}`;
   document.querySelector("#geoId").textContent = `${geoId}`;
   document.querySelector("#timezone").textContent = `${timezone}`;
   document.querySelector("#isp").textContent = `${isp}`;
 };
+
+////////////////////////////////////////
+//EVENT LISTENERS
+
+//open user location on map as user loads
+document.addEventListener("DOMContentLoaded", (e) => {
+  fetchData();
+});
+
+//input button click
+document.querySelector(".input__btn").addEventListener("click", () => {
+  const userInput = document.querySelector(".input__field").value;
+
+  if (userInput.trim() !== "") fetchData(userInput);
+});
