@@ -5,7 +5,7 @@ const cardContents = document.querySelectorAll(".card-content");
 
 ////////////////////////////////////////
 //getting data from API
-let lat, lng, map;
+let map;
 
 const fetchData = function (ipUser = "") {
   fetch(
@@ -19,8 +19,8 @@ const fetchData = function (ipUser = "") {
       return response.json();
     })
     .then((data) => {
-      lat = data.location.lat;
-      lng = data.location.lng;
+      const lat = data.location.lat;
+      const lng = data.location.lng;
 
       cardDetails(
         data.ip,
@@ -61,7 +61,7 @@ const generateMap = function (lat, lng) {
     subdomains: ["mt0", "mt1", "mt2", "mt3"],
   }).addTo(map);
 
-  var myIcon = L.icon({
+  const myIcon = L.icon({
     iconUrl: "images/icon-location.svg",
   });
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" role="application">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,7 +38,7 @@
           class="input__field"
           placeholder="Search for any IP address or domain"
         />
-        <button class="input__btn">
+        <button class="input__btn" aria-label="Enter">
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
             <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
           </svg>
@@ -46,30 +46,30 @@
       </div>
     </header>
 
-    <div class="card">
+    <div class="card" role="table">
       <div class="item">
-        <h3 class="item__title">IP Address</h3>
-        <h2 class="item__content card-content" id="ip"></h2>
+        <h2 class="item__title">IP Address</h2>
+        <h3 class="item__content card-content" id="ip"></h3>
       </div>
       <div class="item">
-        <h3 class="item__title">Location</h3>
-        <h2 class="item__content">
+        <h2 class="item__title">Location</h2>
+        <h3 class="item__content">
           <span class="card-content" id="city"> </span>
           <span class="card-content" id="country"> </span>
           <span class="card-content" id="geoId"> </span>
-        </h2>
+        </h3>
       </div>
       <div class="item">
-        <h3 class="item__title">Timezone</h3>
-        <h2 class="item__content card-content" id="timezone"></h2>
+        <h2 class="item__title">Timezone</h2>
+        <h3 class="item__content card-content" id="timezone"></h3>
       </div>
       <div class="item">
-        <h3 class="item__title">ISP</h3>
-        <h2 class="item__content card-content" id="isp"></h2>
+        <h2 class="item__title">ISP</h2>
+        <h3 class="item__content card-content" id="isp"></h3>
       </div>
     </div>
 
-    <div class="map" id="map"></div>
+    <div class="map" id="map" role="region"></div>
 
     <script
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
