@@ -216,8 +216,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 0 1rem 1rem var(--color-light-gray);
-          box-shadow: 0 1rem 1rem var(--color-light-gray);
+  -webkit-box-shadow: 0 0.8rem 4rem var(--color-light-gray);
+          box-shadow: 0 0.8rem 4rem var(--color-light-gray);
 }
 
 @media (max-width: 34.56em) {
